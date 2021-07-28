@@ -28,6 +28,7 @@ $('#form1').submit(function (e) {
 });
 
 
+
 // Função para trazer os comentários do banco para a tela
 function getComments() {
 
@@ -39,15 +40,18 @@ function getComments() {
         dataType: 'json'
     }).done(function (result) {
         //console.log(result);
+
+        //Resolvendo erro de duplicação dos dados
         var box_comm = document.querySelector('.box_comment');
         while (box_comm.firstChild) {
             box_comm.firstChild.remove();
         }
 
+        // criando um laço para percorrer o json e retornando os dados
         for (i = 0; i < result.length; i++) {
             $('.box_comment').prepend('<div class="b_comm"><h4>' + result[i].name + '</h4><p>' + result[i].comment + '</p></div>');
         }
     });
 }
 
-getComments();
+getComments(); //Chamando a função quando a página é carregada pela primeira vez
