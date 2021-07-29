@@ -16,11 +16,8 @@
 				<input type="submit" form="form1" class="btn-sub" value="Enviar Comentário"/><br><br>
 			</form>
 		</div>
-		<div class="box_comment">
-			
-		</div>
+		<div class="box_comment"></div>
 	</section>
-	
 	<script src="assets/js/jQuery/jquery-3.6.0.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 </body>
